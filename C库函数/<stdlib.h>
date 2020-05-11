@@ -1,0 +1,12 @@
+  
+void qsort(void*, size_t, size_t, int (*)(const void*, const void*));
+
+//eg:
+qsort(data, N, sizeof(int), comp);
+
+int comp(const void* a, const void* b)
+{
+    return *(int*)a - *(int*)b; //升序
+}
+
+---------------------------------------------------------
