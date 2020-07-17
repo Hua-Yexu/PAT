@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 #include <stdlib.h>
 
 int comp(const void * a, const void * b);
