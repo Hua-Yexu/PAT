@@ -9,8 +9,7 @@ int main(void)
     string s = to_string(a+b);
     
     int len = s.length();
-    for(int i = 0, j = 0; i < len; i++, j++)
-    {
+    for(int i = 0, j = 0; i < len; i++, j++){
         cout << s[i];
         if(s[i] == '-') 
             continue;
