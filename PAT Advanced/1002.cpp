@@ -1,19 +1,19 @@
-#include <iostream>
+#include <cstdio>
 using namespace std;
 
 int main(){
     float a[1001] = {0}, A;
     int K, N, cnt = 0;
     
-    cin >> K;
+    scanf("%d", &K);
     for(int i = 0; i < K; i++){
-        cin >> N >> A;
+        scanf("%d %f", &N, &A);
         a[N] = A;
     }
     
-    cin >> K;
+    scanf("%d", &K);
     for(int i = 0; i < K; i++){
-        cin >> N >> A;
+        scanf("%d %f", &N, &A);
         a[N] += A;
     }
     
@@ -21,7 +21,7 @@ int main(){
         if(a[i] != 0)
             cnt++;
     
-    cout << cnt;
+    printf("%d", cnt);
     for(int i = 1000; i >= 0; i--)
         if(a[i] != 0)
             printf(" %d %.1f", i, a[i]);
