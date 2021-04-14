@@ -2,5 +2,5 @@
 
 PAT B: C
 
-PAT A: C++
-1003 Dijkstra
+PAT A: C++               
+A1003 Dijkstra
