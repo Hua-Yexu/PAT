@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -11,18 +12,14 @@ int gethash(string s){
     return n = n*10 + s[3]-'0';
 }
 
-bool cmp(int a, int b){
-    return a < b;
-}
-
 int main(void){
     int N, K;
     vector<int> data[26*26*26*10+10];
     
-    cin >> N >> K;
+    scanf("%d %d", &N, &K);
     for(int i = 0; i < K; i++){
         int ci, k;
-        cin >> ci >> k;
+        scanf("%d %d", &ci, &k);
         for(int j = 0; j < k; j++){
             string s;
             cin >> s;
@@ -35,12 +32,12 @@ int main(void){
         cin >> s;
         int index = gethash(s), size = data[index].size();
         
-        sort(data[index].begin(), data[index].end(), cmp);
+        sort(data[index].begin(), data[index].end());
         
-        cout << s << " " << size;
+        printf("%s %i", s.c_str(), size);
         for(int j = 0; j < size; j++)
-            cout << " " << data[index][j];
-        cout << endl;
+            printf(" %d", data[index][j]);
+        putchar('\n');
     }
     
     return 0;
