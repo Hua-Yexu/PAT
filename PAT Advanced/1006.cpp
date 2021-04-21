@@ -4,9 +4,7 @@
 using namespace std;
 
 typedef struct{
-    int hh;
-    int mm;
-    int ss;
+    int hh, mm, ss;
 }form;
 
 int is_earlier(form temp, form first){
@@ -39,14 +37,11 @@ int main(void){
         scanf("%d:%d:%d %d:%d:%d", &temp_in.hh, &temp_in.mm, &temp_in.ss,
               &temp_out.hh, &temp_out.mm, &temp_out.ss);
         
-        if(is_earlier(temp_in, first)){
-            unlock = name;
-            first = temp_in;
-        }
-        if(is_later(temp_out, last)){
-            lock = name;
-            last = temp_out;
-        }
+        if(is_earlier(temp_in, first))
+            unlock = name, first = temp_in;
+
+        if(is_later(temp_out, last))
+            lock = name, last = temp_out;
     }
     
     cout << unlock << " " << lock;
