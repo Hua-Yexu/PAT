@@ -1,4 +1,4 @@
-//测试点五：银行会服务完所有17点前开始排队的顾客
+//Case 5 : The bank will serve all customers arriving before 17:00
 #include <cstdio>
 #include <vector>
 #include <queue>
