@@ -32,7 +32,7 @@ int main(void){
                 cnt[j] = cnt[now];
             }
             else if(d[now] + road[now][j] == d[j]){
-                cnt[j] += cnt[now];//这里不能理解，为什么是加？？？
+                cnt[j] += cnt[now];
                 if(sum[j] < sum[now] + team[j])
                     sum[j] = sum[now] + team[j];
             }
